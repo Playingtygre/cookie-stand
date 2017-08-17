@@ -1,9 +1,10 @@
 'use strict';
 
+prompt('dfd');
 var timeOfDay = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'Total: '];
 var stores = [];
 
-//Object prototype for stores //
+//Object  for stores //
 function StorePlace (maxCust, minCust, avgCookie, location){
   this.maxCust = maxCust;
   this.minCust = minCust;
@@ -27,7 +28,7 @@ function StorePlace (maxCust, minCust, avgCookie, location){
 }
 
 ////spreadsheet tablebox - table - thead - tr - td//////
-var createTable = function() {
+var createTable = function(store) {
   var tableDiv = document.getElementById('tableBox');
   var tableBox = document.createElement('table');
   var tableHead = document.createElement('thead');
@@ -39,7 +40,7 @@ var createTable = function() {
     var thEl = document.createElement('th');
     thEl.innerText = timeOfDay[i];
     tableRow.appendChild(thEl);
-  }
+  };
   /////calls table head with looping for length of time///
   tableHead.appendChild(tableRow);
   tableBox.appendChild(tableHead);
@@ -54,11 +55,27 @@ var createTable = function() {
       tableData.innerText = stores[i].averageCookies[j];
       tableRow.appendChild(tableData);
     }
+    var tableColumn = document.createElement('td');
+    tableColumn.innerText = store[i].totalCookies;
+    tableRow.appendChild(tableColumn);
+
     tableBody.appendChild(tableRow);
   }
   tableBox.appendChild(tableBody);
   tableDiv.appendChild(tableBox);
 };
+console.log('hello');
+
+//totals box//// needs to pull data from all other hours and adds them
+
+var totalbox = function(store){
+  for ( var i = 0; i < store.length; i++){
+    var tableColumn = document.createElement('td');
+    tableColumn.innerText = store[i].totalCookies;
+    tableData.appendChild('tableColumn');
+  }
+};
+// console.log('hello')
 
 new StorePlace (65, 23, 6.3, '1st and Pike');
 new StorePlace (24, 3, 1.2, 'SeaTac Airport');
@@ -66,12 +83,11 @@ new StorePlace (38, 11, 3.7, 'Seattle Center');
 new StorePlace (38, 20, 2.3, 'Capital Hill');
 new StorePlace (16, 2, 4.6, 'Alki');
 
+//calls the cookie method
 for (var k = 0; k < stores.length; k++){
   stores[k].cookiefunction();
   console.log('hello');
-}
+};
 
-/////making new  input boxes with added space///
-createTable();
-var elUsername = document.getElementById('title');
-elUsername.addEventListener('input');
+///all creat tables must be at the end///
+createTable(stores);
