@@ -4,31 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-<img src ="Fish.jpg">
-
 <img src="Fish.jpg" alt="a fish">
+<h1>Salmon Cookie Sales </h1>
+<div id = 'tableBox'>
+  <form id="theForm">
+        <table  >
+          <tr>
+            <td><label for="Newlocation"> New Location </label></td>
+            <td><input type="text" name="Newlocation" class="field" placeholder= "location" required id="Newlocation" /></td>
+          </tr>
+          <tr>
+            <td><label for="min"> New Minimun Cookies </label></td>
+            <td><input type="text" name="author" class="field" placeholder="Minimun"required id="min" /></td>
+          </tr>
 
-
-<h2> 1st and Pike </h2>
-<ul id ='pike'> </ul>
-
-
-<h3> SeaTac</h3>
-<ul id = 'seatac'></ul>
-
-<h2> Seattle Center </h2>
-<ul id= 'seattleCenter'></ul>
-
-<h2> Capital Hill Store </h2>
-<ul id = 'capitalHill'> </ul>
-
-<h2>Alki Store</h2>
-<ul id= 'alkiStore'></ul>
-
-</ul>
+          <tr>
+            <td><label for="cookies"> New Max Cookies </label></td>
+            <td><input type="number" name="date" class="field" placeholder = "max" required id="cookies"/></td>
+          </tr>
+           <tr>
+            <td><label for="min"> New Average Cookies </label></td>
+            <td><input type="text" name="author" class="field" placeholder=" cookies per hour " required id="min" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="text-align: right;">
+              <input type="submit" value="Add a new Location" id="submit" />
+            </td>
+          </tr>
+        </table>
+  </form>
 
   </body>
   <script src = "app.js" type ='text/javascript'></script>
