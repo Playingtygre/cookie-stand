@@ -66,25 +66,12 @@ var createTable = function(store) {
 };
 console.log('hello');
 
-//totals box//// needs to pull data from all other hours and adds them
-//
-// var totalbox = function(store){
-//   for ( var i = 0; i < store.length; i++){
-//     var tableColumn = document.createElement('td');
-//     tableColumn.innerText = store[i].totalCookies;
-//     tableData.appendChild('tableColumn');
-//   }
-// };
-// console.log('hello')
-
 new StorePlace (65, 23, 6.3, '1st and Pike');
 new StorePlace (24, 3, 1.2, 'SeaTac Airport');
 new StorePlace (38, 11, 3.7, 'Seattle Center');
 new StorePlace (38, 20, 2.3, 'Capital Hill');
 new StorePlace (16, 2, 4.6, 'Alki');
 //new StorePlace (1,1,1,'park place')
-
-
 //calls the cookie method
 for (var k = 0; k < stores.length; k++){
   stores[k].cookiefunction();
@@ -100,6 +87,9 @@ submit.addEventListener('click', myFunction);
 function myFunction() {
   alert ('Thank you Pat for submitting');
 };
+////find form in HTML get by ID, set ID to variable, new form. add event Listeners.
+//'submit', create another function that gets all that data and pushes the data
+//into the constuctor fuction,  var event.preventdefult(); -- run this event listener.
 
 //creat a new elelt every time the button is clicked
 //take data from form, create a new store ojbect
