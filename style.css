@@ -13,3 +13,7 @@ body{
 form {
     background-color: antiquewhite;
 }
+
+td {
+  border: 3px solid black;
+}
