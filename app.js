@@ -1,6 +1,5 @@
 'use strict';
 
-prompt('dfd');
 var timeOfDay = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'Total: '];
 var stores = [];
 
@@ -91,3 +90,29 @@ for (var k = 0; k < stores.length; k++){
 
 ///all creat tables must be at the end///
 createTable(stores);
+
+////Even Listeners////wanting tod perform thank you!
+submit.addEventListener('click', myFunction);
+
+function myFunction() {
+  alert ('Thank you Pat for submitting');
+};
+////input the submit button to input data onto the rows
+function myCreateFunction() {
+    var table = document.getElementById("td");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+};
+
+function myDeleteFunction() {
+    document.getElementById('td').deleteRow(0);
+
+/////
+// fucntion(putting arugments in fuction)
+// var row = table.insertRow ()
+// creat a for looop//
+//
+// event.preventdefult();
