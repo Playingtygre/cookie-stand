@@ -6,37 +6,50 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+
+  <div id="wrapper">
+  <div id="menu">
+  <div id="innermenu">
+  <ul id="menulist">
+<li class="menuitem"><a href="index.html"><div class="menulink">Homepage</div></a></li>
+<li class="menuitem"><a href="About_us.html"><div class="menulink">About US</div></a></li>
+<li class="menuitem"><a href="sales.html"><div class="menulink">Our Daily Sales </div></a></li>
+<li class="menuitem"><a href="order_page.html"><div class="menulink">Order From Us</div></a></li></ul></div></div>
+</div>
+  <body>
   <body>
 
 <img src="Fish.jpg" alt="a fish">
 <h1>Salmon Cookie Sales </h1>
 <div id = 'tableBox'>
-  <form id="theForm">
+  <form id="form">
         <table  >
           <tr>
             <td><label for="Newlocation"> New Location </label></td>
-            <td><input type="text" name="Newlocation" class="field" placeholder= "location" required id="Newlocation" /></td>
+            <td><input type="text" id="Newlocation" class="field" placeholder= "location" required id="Newlocation" /></td>
           </tr>
           <tr>
             <td><label for="min"> New Minimun Cookies </label></td>
-            <td><input type="number" name="author" class="field" placeholder="Minimun"required id="min" /></td>
+    <td><input type="number" name="min" class="field" placeholder="min" required id= "min" /></td>
           </tr>
 
           <tr>
             <td><label for="cookies"> New Max Cookies </label></td>
-            <td><input type="number" name="date" class="field" placeholder = "max" required id="cookies"/></td>
+            <td><input type="number" name="max" class="field" placeholder = "max" required id="cookies"/></td>
           </tr>
            <tr>
             <td><label for="min"> New Average Cookies </label></td>
-            <td><input type="number" name="author" class="field" placeholder=" cookies per hour " required id="min" /></td>
+            <td><input type="number" name="avg" class="field" step = '.01' placeholder=" cookies per hour " required id="avg" /></td>
           </tr>
           <tr>
             <td></td>
             <td style="text-align: right;">
-              <input type="submit" value="Add a new Location" id="submit" />
+              <input type="button" value="Add a new Location" id="submit" />
             </td>
           </tr>
         </table>
+<table id = '2nd'></table>
+
   </form>
 
 

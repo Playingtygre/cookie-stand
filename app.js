@@ -81,36 +81,20 @@ for (var k = 0; k < stores.length; k++){
 ///all creat tables must be at the end///
 createTable(stores);
 
-////Even Listeners////wanting tod perform thank you!
-submit.addEventListener('click', myFunction);
+////Even Listeners////wanting to perform thank you!
+var button = document.getElementById('submit');
+button.addEventListener('click', myFunction);
 
 function myFunction() {
-  alert ('Thank you Pat for submitting');
+  alert('Thank you Pat for submitting a new Store');
+}
+
+var form = document.getElementById('form');
+form.addEventListener('submit', createNewStore, stores);
+
+function createNewStore(event) {
+  var localName = this.elements['Newlocation'].value;
+  var localmax = this.elements['max'].value;
+  var localmin = this.elements['min'].value;
+  var localavg = parseFloat(this.elements['avg'].value);
 };
-////find form in HTML get by ID, set ID to variable, new form. add event Listeners.
-//'submit', create another function that gets all that data and pushes the data
-//into the constuctor fuction,  var event.preventdefult(); -- run this event listener.
-
-//creat a new elelt every time the button is clicked
-//take data from form, create a new store ojbect
-//append new store and call function to store.
-
-////input the submit button to input data onto the rows
-// function myCreateFunction() {
-//     var table = document.getElementById("td");
-//     var row = table.insertRow(0);
-//     var cell1 = row.insertCell(0);
-//     var cell2 = row.insertCell(1);
-//     cell1.innerHTML = "NEW CELL1";
-//     cell2.innerHTML = "NEW CELL2";
-// };
-//
-// function myDeleteFunction() {
-//  document.getElementById('td').deleteRow(0);
-
-/////
-// fucntion(putting arugments in fuction)
-// var row = table.insertRow ()
-// creat a for looop//
-//
-// event.preventdefult();
