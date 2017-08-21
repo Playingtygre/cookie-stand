@@ -4,31 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+
+  <div id="wrapper">
+  <div id="menu">
+  <div id="innermenu">
+  <ul id="menulist">
+<li class="menuitem"><a href="index.html"><div class="menulink">Homepage</div></a></li>
+<li class="menuitem"><a href="About_us.html"><div class="menulink">About US</div></a></li>
+<li class="menuitem"><a href="sales.html"><div class="menulink">Our Daily Sales </div></a></li>
+<li class="menuitem"><a href="order_page.html"><div class="menulink">Order From Us</div></a></li></ul></div></div>
+</div>
   <body>
-<img src ="Fish.jpg">
+  <body>
 
 <img src="Fish.jpg" alt="a fish">
+<h1>Salmon Cookie Sales </h1>
+<div id = 'tableBox'>
+  <form id="form">
+        <table  >
+          <tr>
+            <td><label for="Newlocation"> New Location </label></td>
+            <td><input type="text" id="Newlocation" class="field" placeholder= "location" required id="Newlocation" /></td>
+          </tr>
+          <tr>
+            <td><label for="min"> New Minimun Cookies </label></td>
+    <td><input type="number" name="min" class="field" placeholder="min" required id= "min" /></td>
+          </tr>
 
+          <tr>
+            <td><label for="cookies"> New Max Cookies </label></td>
+            <td><input type="number" name="max" class="field" placeholder = "max" required id="cookies"/></td>
+          </tr>
+           <tr>
+            <td><label for="min"> New Average Cookies </label></td>
+            <td><input type="number" name="avg" class="field" step = '.01' placeholder=" cookies per hour " required id="avg" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td style="text-align: right;">
+              <input type="button" value="Add a new Location" id="submit" />
+            </td>
+          </tr>
+        </table>
+<table id = '2nd'></table>
 
-<h2> 1st and Pike </h2>
-<ul id ='pike'> </ul>
+  </form>
 
-
-<h3> SeaTac</h3>
-<ul id = 'seatac'></ul>
-
-<h2> Seattle Center </h2>
-<ul id= 'seattleCenter'></ul>
-
-<h2> Capital Hill Store </h2>
-<ul id = 'capitalHill'> </ul>
-
-<h2>Alki Store</h2>
-<ul id= 'alkiStore'></ul>
-
-</ul>
 
   </body>
   <script src = "app.js" type ='text/javascript'></script>
