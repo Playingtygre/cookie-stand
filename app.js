@@ -72,25 +72,27 @@ for (var k = 0; k < stores.length; k++){
 
 createTable(stores);
 
-var button = document.getElementById('submit');
-button.addEventListener('click', myFunction);
-
-function myFunction() {
-  alert('Thank you Pat for submitting a new Store');
-}
-
-var form = document.getElementById('form');
-form.addEventListener('submit', createNewStore, stores);
+var form = document.getElementById('orderForm');
+form.addEventListener('submit', createNewStore);
 
 function createNewStore(event) {
-  var localName = this.elements['Newlocation'].value;
+  event.preventDefault();
+  var localName = this.elements['location'].value;
   var localmax = parseInt(this.elements['max'].value);
   var localmin = parseInt(this.elements['min'].value);
   var localavg = parseFloat(this.elements['avg'].value);
-  var newStore = new StorePlace (localmax, localmin, localavg, localName)
+  var newStore = new StorePlace (localmax, localmin, localavg, localName);
+  console.log(newStore);
+  addNewStore;
 };
 
-  function addNewStore (){
-    for (i = 0; i < createNewStore.length; i++) {
+function addNewStore (){
+  for (i = 0; i < newStore.length; i++)
+    tableRow = document.createElement('tr');
+  tableData = document.createElement('td');
+  tableData.innerText = stores[i].location;
+  tableRow.appendChild(tableData);
+  console.log(addNewStore);
 
-  } find how to create random funiont store in arra[]
+}
+// createElement('tr');
