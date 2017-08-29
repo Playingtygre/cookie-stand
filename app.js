@@ -74,6 +74,7 @@ createTable(stores);
 
 var form = document.getElementById('orderForm');
 form.addEventListener('submit', createNewStore);
+form.addEventListener('submit', myFunction);
 
 function createNewStore(event) {
   event.preventDefault();
@@ -83,16 +84,18 @@ function createNewStore(event) {
   var localavg = parseFloat(this.elements['avg'].value);
   var newStore = new StorePlace (localmax, localmin, localavg, localName);
   console.log(newStore);
-  addNewStore;
 };
 
-function addNewStore (){
-  for (i = 0; i < newStore.length; i++)
-    tableRow = document.createElement('tr');
-  tableData = document.createElement('td');
-  tableData.innerText = stores[i].location;
-  tableRow.appendChild(tableData);
-  console.log(addNewStore);
-
+function myFunction() {
+  var table = document.getElementById('2nd');
+  var row = tableBox.insertRow(0);
+  var cell1 = row.insertCell(0);
+  cell1.innerHTML = stores[i].location;
 }
-// createElement('tr');
+
+// function addNewStore (){
+//   for (i = 0; i < newStore.length; i++)
+//     var addStore = document.getElementById('tr');
+//   addStore.innerText = StorePlace[i];
+//   console.log('hi');
+// };
