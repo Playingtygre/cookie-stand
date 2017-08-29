@@ -3,7 +3,6 @@
 var timeOfDay = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'Total: '];
 var stores = [];
 
-//Object  for stores //
 function StorePlace (maxCust, minCust, avgCookie, location){
   this.maxCust = maxCust;
   this.minCust = minCust;
@@ -16,7 +15,6 @@ function StorePlace (maxCust, minCust, avgCookie, location){
     return Math.floor(Math.random() * this.maxCust) + this.minCust;
   };
 
-////method for accessing random cookie counter //
   this.cookiefunction = function(){
     for (var i = 0; i < (timeOfDay.length - 1); i++) {
       var cookieHr =  Math.floor(this.getRandom() * this.avgCookie);
@@ -26,7 +24,6 @@ function StorePlace (maxCust, minCust, avgCookie, location){
   };
 }
 
-////spreadsheet tablebox - table - thead - tr - td//////
 var createTable = function(store) {
   var tableDiv = document.getElementById('tableBox');
   var tableBox = document.createElement('table');
@@ -40,7 +37,7 @@ var createTable = function(store) {
     thEl.innerText = timeOfDay[i];
     tableRow.appendChild(thEl);
   };
-  /////calls table head with looping for length of time///
+
   tableHead.appendChild(tableRow);
   tableBox.appendChild(tableHead);
   var tableBody = document.createElement('tbody');
@@ -71,17 +68,13 @@ new StorePlace (24, 3, 1.2, 'SeaTac Airport');
 new StorePlace (38, 11, 3.7, 'Seattle Center');
 new StorePlace (38, 20, 2.3, 'Capital Hill');
 new StorePlace (16, 2, 4.6, 'Alki');
-//new StorePlace (1,1,1,'park place')
-//calls the cookie method
 for (var k = 0; k < stores.length; k++){
   stores[k].cookiefunction();
   console.log('hello');
 };
 
-///all creat tables must be at the end///
 createTable(stores);
 
-////Even Listeners////wanting to perform thank you!
 var button = document.getElementById('submit');
 button.addEventListener('click', myFunction);
 
