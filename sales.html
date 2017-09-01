@@ -19,14 +19,14 @@
   <body>
   <body>
 
-<img src="Fish.jpg" alt="a fish">
+<img src="img/Fish.jpg" alt="a fish">
 <h1>Salmon Cookie Sales </h1>
 <div id = 'tableBox'>
-  <form id="form">
+  <form id="orderForm">
         <table  >
           <tr>
             <td><label for="Newlocation"> New Location </label></td>
-            <td><input type="text" id="Newlocation" class="field" placeholder= "location" required id="Newlocation" /></td>
+            <td><input type="text" name="location" class="field" placeholder= "location" required id="Newlocation" /></td>
           </tr>
           <tr>
             <td><label for="min"> New Minimun Cookies </label></td>
@@ -44,7 +44,7 @@
           <tr>
             <td></td>
             <td style="text-align: right;">
-              <input type="button" value="Add a new Location" id="submit" />
+              <input type="submit" value="Add a new Location" id="submit" />
             </td>
           </tr>
         </table>

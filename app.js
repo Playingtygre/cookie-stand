@@ -53,7 +53,6 @@ var createTable = function(store) {
     }
     var tableColumn = document.createElement('td');
     tableColumn.innerText = store[i].totalCookies;
-    console.log(store[i].totalCookies);
     tableRow.appendChild(tableColumn);
 
     tableBody.appendChild(tableRow);
@@ -61,7 +60,6 @@ var createTable = function(store) {
   tableBox.appendChild(tableBody);
   tableDiv.appendChild(tableBox);
 };
-console.log('hello');
 
 new StorePlace (65, 23, 6.3, '1st and Pike');
 new StorePlace (24, 3, 1.2, 'SeaTac Airport');
@@ -70,24 +68,25 @@ new StorePlace (38, 20, 2.3, 'Capital Hill');
 new StorePlace (16, 2, 4.6, 'Alki');
 for (var k = 0; k < stores.length; k++){
   stores[k].cookiefunction();
-  console.log('hello');
 };
 
 createTable(stores);
 
-var button = document.getElementById('submit');
-button.addEventListener('click', myFunction);
-
-function myFunction() {
-  alert('Thank you Pat for submitting a new Store');
-}
-
-var form = document.getElementById('form');
-form.addEventListener('submit', createNewStore, stores);
+var form = document.getElementById('orderForm');
+form.addEventListener('submit', createNewStore);
+form.addEventListener('submit', addNew);
 
 function createNewStore(event) {
-  var localName = this.elements['Newlocation'].value;
-  var localmax = this.elements['max'].value;
-  var localmin = this.elements['min'].value;
+  event.preventDefault();
+  var localName = this.elements['location'].value;
+  var localmax = parseInt(this.elements['max'].value);
+  var localmin = parseInt(this.elements['min'].value);
   var localavg = parseFloat(this.elements['avg'].value);
+  var newStore = new StorePlace (localmax, localmin, localavg, localName);
+  console.log(newStore);
+  stores.push(this);
+};
+
+function addNew() {
+  console.log(hi);
 };
